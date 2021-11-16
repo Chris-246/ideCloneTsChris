@@ -1,0 +1,21 @@
+import { Button } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import { useHistory } from "react-router";
+import paths from "routes/paths";
+
+const CodeEditorStyledButton = styled(Button)(({ theme }) => ({
+    color: theme.commonColors.white,
+
+}))
+
+const CodeEditorButton = () => {
+    const history = useHistory();
+
+    const onSignIn = () => {
+        history.push(paths.codeEditor)
+    };
+
+    return <CodeEditorStyledButton onClick={onSignIn}>Code Editor</CodeEditorStyledButton>;
+}
+
+export default CodeEditorButton;
