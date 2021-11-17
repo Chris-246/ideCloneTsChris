@@ -27,7 +27,7 @@ const CodeEditorContainer = () => {
     }
     return(
         <CodeEditorContainerDiv>
-            <AppBar>
+            <AppBar position="static" color="default">
                 <Tabs textColor='primary' indicatorColor='primary' variant='scrollable' value={tabValue} onChange={onTabClick}>
                     {activeFiles.map(activeFile => {
                         const { id } = activeFile;
@@ -36,9 +36,9 @@ const CodeEditorContainer = () => {
                 </Tabs>
             </AppBar>
             {activeFiles.map(activeFile => {
-                    const { id } = activeFile;
-                    return <CustomTabPanel key={id} activeFile={activeFile} editorActiveFileId={editorActiveFileId} />
-                })}
+                const { id } = activeFile;
+                return <CustomTabPanel key={id} activeFile={activeFile} editorActiveFileId={editorActiveFileId} />
+            })}
         </CodeEditorContainerDiv>
     );
 };
