@@ -36,7 +36,7 @@ const CustomTabLabelContainer = styled('div')({
 });
 
 const FileName = styled('div')(({ theme }) => ({
-    padding: '0px 5px',
+    padding: '0px 10px',
     color: theme.font,
 }))
 
